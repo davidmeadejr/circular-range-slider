@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url("./assets/images/flooz_background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: MatterRegular;
+}
+
+@font-face {
+  font-family: "MatterRegular";
+  src: url("./assets/fonts/matter-regular.woff2") format("woff2"),
+    url("./assets/fonts/matter-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
