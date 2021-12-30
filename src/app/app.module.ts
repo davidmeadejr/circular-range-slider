@@ -8,7 +8,9 @@ import { MinButtonComponent } from './components/min-button/min-button.component
 import { MaxButtonComponent } from './components/max-button/max-button.component';
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { CircularSliderComponent } from './components/circular-slider/circular-slider.component'
+import { CircularSliderComponent } from './components/circular-slider/circular-slider.component';
+import { CircularSliderModalComponent } from './components/circular-slider-modal/circular-slider-modal.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CircularSliderComponent } from './components/circular-slider/circular-s
     OuterCircleComponent,
     MinButtonComponent,
     MaxButtonComponent,
-    CircularSliderComponent
+    CircularSliderComponent,
+    CircularSliderModalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
