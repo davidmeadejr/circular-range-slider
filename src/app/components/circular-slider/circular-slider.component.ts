@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
 import 'round-slider';
@@ -12,12 +12,22 @@ export class CircularSliderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    $('#slider5').roundSlider({
-      radius: 110,
-      width: 22,
-      // handleSize: '+10',
+    /*
+     * Circular slider setup
+     */
+    $('#circularSlider').roundSlider({
+      radius: 125,
+      width: 30,
       sliderType: 'range',
       value: '0,100',
+      circleShape: 'pie',
+      startAngle: '315',
+      svgMode: true,
+      pathColor: '#8eb2c7',
+      rangeColor: '##4386a3',
+      handleShape: 'round',
+      lineCap: 'round',
+      borderWidth: 0,
     });
   }
 }
