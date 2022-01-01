@@ -4,9 +4,10 @@
   height: 15rem;
   width: 15rem;
   background-color: transparent;
-  display: inline-block;
+  display: flex;
   border: 2px solid #b9b6ea;
   justify-content: center;
+  align-items: center;
 }
 
 .min-button {
@@ -33,4 +34,15 @@
     rgba(0, 212, 255, 1) 100%
   );
   display: inline-block;
+}
+
+.inner-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1px;
+  width: 1px;
+  border-radius: 50%;
+
+  background: red;
 }
