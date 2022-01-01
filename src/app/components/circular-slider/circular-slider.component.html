@@ -1,8 +1,12 @@
 <div #sliderContainer class="slidercontainer">
-  <div class="outer-border"></div>
-  <app-min-button></app-min-button><app-max-button></app-max-button>
+  <div class="outer-border">
+    <div class="inner-border" #innerBorder (click)="mouseRelPosition()"></div>
+    <app-min-button></app-min-button>
+    <app-max-button></app-max-button>
+  </div>
   <!-- //TODO: import outer circle component -->
   <!-- //TODO: import inner circle component -->
   <!-- //TODO: import min button component  -->
   <!-- //TODO: import max button component -->
 </div>
+<!-- (click)="getMouseCirclePosition()" -->
