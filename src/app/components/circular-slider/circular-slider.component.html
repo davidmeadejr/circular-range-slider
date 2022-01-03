@@ -4,11 +4,19 @@
     [ngStyle]="{ 'width.px': diameter, 'height.px': diameter }"
   >
     <div class="rotation">{{ angle }}</div>
+    <div class="rotation-max-button">{{ angleMaxButton }}</div>
+
     <div
       class="min-circle-button"
       minCircularSliderButton
       [diameter]="diameter"
       [(angle)]="angle"
+    ></div>
+    <div
+      class="max-circle-button"
+      maxCircularSliderButton
+      [diameter]="diameterMaxButton"
+      [(angle)]="angleMaxButton"
     ></div>
   </div>
 </div>

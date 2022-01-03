@@ -32,5 +32,23 @@ export class CircularSliderComponent implements OnInit {
     this.angleChange.emit(this._angle);
   }
 
+  private _angleMaxButton: any = 120;
+
+  @Input()
+  diameterMaxButton: number = 200;
+
+  @Input()
+  get angleMaxButton() {
+    return this._angleMaxButton;
+  }
+
+  @Output()
+  angleChangeMaxButton = new EventEmitter<number>();
+
+  set angleMaxButton(deg: number) {
+    this._angleMaxButton = deg || 0;
+    this.angleChangeMaxButton.emit(this._angle);
+  }
+
   ngOnInit(): void {}
 }

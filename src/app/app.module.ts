@@ -12,6 +12,7 @@ import { CircularSliderComponent } from './components/circular-slider/circular-s
 import { CircularSliderModalComponent } from './components/circular-slider-modal/circular-slider-modal.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CircularSliderModule } from './components/circular-slider.module';
+import { MaxButtonSliderModule } from './components/max-button-slider.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,12 @@ import { CircularSliderModule } from './components/circular-slider.module';
     CircularSliderModalComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, CircularSliderModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    CircularSliderModule,
+    MaxButtonSliderModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
