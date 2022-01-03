@@ -264,6 +264,7 @@ function parseMouseEvent(event: MouseEvent): Point {
 /*
  * TODO:
  * Minimum button logic where it can only be dragged clockwise from angles 220 to 140 and anti-clockwise from 140 - 220.
+ * Logic that removes the ability for the min button to overlap the max button.
  * Logic that sets the angle 220 as the lowest possible value of 0  and the angle 140 as the highest possible value of 100.
  * Mouse position x and y coordinates maintain the correct position relative to page zoom in or zoom out states.
  */
