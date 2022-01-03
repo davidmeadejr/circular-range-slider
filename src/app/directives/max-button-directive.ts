@@ -239,3 +239,10 @@ function parseMouseEvent(event: MouseEvent): Point {
     y: event.pageY,
   };
 }
+
+/*
+ * TODO:
+ * Maximum button logic where it can only be dragged anti-clockwise from angles 140 to 220 and clockwise from 220 - 140.
+ * Logic that sets the angle 220 as the lowest possible value of 0 and the angle 140 as the highest possible value of 100.
+ * Mouse position x and y coordinates maintain the correct position relative to page zoom in or zoom out states.
+ */
