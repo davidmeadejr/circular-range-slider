@@ -184,7 +184,7 @@ export class minCircularSliderButtonDirective implements OnInit {
     if (this.diameter) {
       const offset = this.circleRadius - this.minButtonDiameter / 2;
       const mousePos: Point = {
-        x: windowPoint.x - offset - 1088 + this.minButtonDiameter,
+        x: windowPoint.x - offset - 1070 + this.minButtonDiameter,
         y: windowPoint.y - offset - 360 + this.minButtonDiameter,
       };
       const aTan = Math.atan2(

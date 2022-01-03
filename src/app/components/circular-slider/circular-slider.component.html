@@ -1,22 +1,11 @@
 <div #sliderContainer class="slider-container">
   <div
-    class="circle"
+    class="circle-circumference"
     [ngStyle]="{ 'width.px': diameter, 'height.px': diameter }"
   >
-    <div class="rotation">{{ angle }} -</div>
-    <div class="rotation-max-button">{{ angleMaxButton }}</div>
-
-    <div
-      class="min-circle-button"
-      minCircularSliderButton
-      [diameter]="diameter"
-      [(angle)]="angle"
-    ></div>
-    <div
-      class="max-circle-button"
-      maxCircularSliderButton
-      [diameter]="diameterMaxButton"
-      [(angle)]="angleMaxButton"
-    ></div>
+    <app-inner-circle></app-inner-circle>
+    <app-outer-circle></app-outer-circle>
+    <app-min-button></app-min-button>
+    <app-max-button></app-max-button>
   </div>
 </div>
