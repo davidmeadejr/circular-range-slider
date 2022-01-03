@@ -1,0 +1,12 @@
+.outer-circle {
+  height: 235px;
+  width: 235px;
+  background-color: none;
+  border-radius: 50%;
+  display: inline-block;
+  border: 5px double rgba(185, 182, 224, 1);
+  margin-top: -211px;
+  margin-left: -22px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}

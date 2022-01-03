@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+  EventEmitter,
+} from '@angular/core';
 
 import * as $ from 'jquery';
 import 'round-slider';
@@ -9,7 +17,8 @@ import 'round-slider';
   styleUrls: ['./circular-slider.component.scss'],
 })
 export class CircularSliderComponent implements OnInit {
-  constructor() {}
+  @Input()
+  diameter: number = 200;
 
   ngOnInit() {
     /*
