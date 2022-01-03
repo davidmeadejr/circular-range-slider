@@ -68,7 +68,7 @@ export class maxCircularSliderButtonDirective implements OnInit {
    * Sets the size of the min button and positions it on the circumference of the circle.
    */
   private maxButtonPosition() {
-    this.maxButtonDiameter = this.diameter! / 5;
+    this.maxButtonDiameter = this.diameter! / 7;
     this.circleRadius = this.diameter! / 2;
     this.element.style.width = `${this.maxButtonDiameter}px`;
     this.element.style.height = `${this.maxButtonDiameter}px`;
@@ -184,7 +184,7 @@ export class maxCircularSliderButtonDirective implements OnInit {
     if (this.diameter) {
       const offset = this.circleRadius - this.maxButtonDiameter / 2;
       const mousePos: Point = {
-        x: windowPoint.x - offset - 400 + this.maxButtonDiameter,
+        x: windowPoint.x - offset - 1170 + this.maxButtonDiameter,
         y: windowPoint.y - offset - 360 + this.maxButtonDiameter,
       };
       const aTan = Math.atan2(

@@ -14,7 +14,7 @@ import {
   styleUrls: ['./circular-slider.component.scss'],
 })
 export class CircularSliderComponent implements OnInit {
-  private _angle: any = 240;
+  private _angle: any = 220;
 
   @Input()
   diameter: number = 200;
@@ -32,7 +32,7 @@ export class CircularSliderComponent implements OnInit {
     this.angleChange.emit(this._angle);
   }
 
-  private _angleMaxButton: any = 120;
+  private _angleMaxButton: any = 140;
 
   @Input()
   diameterMaxButton: number = 200;
