@@ -18,28 +18,49 @@ const MOUSE_PRIMARY = 0;
   selector: '[minCircularSliderButton]',
 })
 export class minCircularSliderButtonDirective implements OnInit {
+  /*
+   *
+   */
   private element: HTMLElement;
   private elementStartSubscription?: Subscription;
   private elementMoveSubscription?: Subscription;
 
+  /*
+   *
+   */
   private _angle: number = 0;
 
+  /*
+   *
+   */
   private windowStart?: Point;
   private layerLatestDelta?: any = 0;
   private circleRadius: number = 0;
   private minButtonDiameter: number = 0;
 
+  /*
+   *
+   */
   @Input()
   diameter?: number;
 
+  /*
+   *
+   */
   @Input()
   get angle() {
     return this._angle;
   }
 
+  /*
+   *
+   */
   @Output()
   angleChange = new EventEmitter<number>();
 
+  /*
+   *
+   */
   set angle(deg: number) {
     this._angle = deg || 0;
     this.setTransform(this.calcMinButtonPosition(this._angle));

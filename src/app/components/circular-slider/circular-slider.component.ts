@@ -1,15 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  Output,
-  ViewChild,
-  EventEmitter,
-} from '@angular/core';
-
-import * as $ from 'jquery';
-import 'round-slider';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-circular-slider',
@@ -17,26 +6,15 @@ import 'round-slider';
   styleUrls: ['./circular-slider.component.scss'],
 })
 export class CircularSliderComponent implements OnInit {
+  /*
+   * Creates an input property called diameter and assigns it a type number with a value of 200.
+   * Which then binds to the ngStyle directive.
+   * Then dynamically assigns the width and the height of the circle to 200px.
+   */
   @Input()
   diameter: number = 200;
 
-  ngOnInit() {
-    /*
-     * Circular slider setup
-     */
-    $('#circularSlider').roundSlider({
-      radius: 125,
-      width: 30,
-      sliderType: 'range',
-      value: '0,100',
-      circleShape: 'pie',
-      startAngle: '315',
-      svgMode: true,
-      pathColor: '#8eb2c7',
-      rangeColor: '##4386a3',
-      handleShape: 'round',
-      lineCap: 'round',
-      borderWidth: 0,
-    });
-  }
+  constructor() {}
+
+  ngOnInit() {}
 }

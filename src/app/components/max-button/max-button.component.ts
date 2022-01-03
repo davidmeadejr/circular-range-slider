@@ -6,23 +6,24 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./max-button.component.scss'],
 })
 export class MaxButtonComponent implements OnInit {
-  private _angleMaxButton: any = 140;
-
+  /*
+   * Creates an input property called diameterMaxButton and assigns it a type number with a value of 200.
+   * Which then binds to diameter property found in the maxCircularSliderButtonDirective.
+   * Then dynamically assigns the value of the diameter calculated in the minButtonPosition function.
+   * Found in the minCircularSliderButtonDirective.
+   */
   @Input()
   diameterMaxButton: number = 200;
 
+  /*
+   * Creates an input property called maxButtonCurrentPosition and assigns it a value of 140.
+   * Which then two way binds to the angle property found in the maxCircularSliderButtonDirective.
+   * Then dynamically updates the position of the max button when it is dragged.
+   * Along with updating the numerical value calculated in the dragMove function
+   * Found in the maxCircularSliderButtonDirective.
+   */
   @Input()
-  get angleMaxButton() {
-    return this._angleMaxButton;
-  }
-
-  @Output()
-  angleChangeMaxButton = new EventEmitter<number>();
-
-  set angleMaxButton(deg: number) {
-    this._angleMaxButton = deg || 0;
-    this.angleChangeMaxButton.emit(this._angleMaxButton);
-  }
+  maxButtonCurrentPosition: any = 140;
 
   constructor() {}
 

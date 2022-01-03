@@ -6,41 +6,26 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./min-button.component.scss'],
 })
 export class MinButtonComponent implements OnInit {
-  private _angle: any = 220;
-
+  /*
+   * Creates an input property called diameterMinButton and assigns it a type number with a value of 200.
+   * Which then binds to diameter property found in the minCircularSliderButtonDirective.
+   * Then dynamically assigns the value of the diameter calculated in the minButtonPosition function.
+   * Found in the minCircularSliderButtonDirective.
+   */
   @Input()
-  diameter: number = 200;
+  diameterMinButton: number = 200;
 
+  /*
+   * Creates an input property called minButtonCurrentPosition and assigns it a value of 220.
+   * Which then two way binds to the angle property found in the minCircularSliderButtonDirective.
+   * Then dynamically updates the position of the min button when it is dragged.
+   * Along with updating the numerical value calculated in the dragMove function
+   * Found in the minCircularSliderButtonDirective.
+   */
   @Input()
-  get angle() {
-    return this._angle;
-  }
+  minButtonCurrentPosition: any = 220;
 
-  @Output()
-  angleChange = new EventEmitter<number>();
-
-  set angle(deg: number) {
-    this._angle = deg || 0;
-    this.angleChange.emit(this._angle);
-  }
-
-  private _angleMaxButton: any = 140;
-
-  @Input()
-  diameterMaxButton: number = 200;
-
-  @Input()
-  get angleMaxButton() {
-    return this._angleMaxButton;
-  }
-
-  @Output()
-  angleChangeMaxButton = new EventEmitter<number>();
-
-  set angleMaxButton(deg: number) {
-    this._angleMaxButton = deg || 0;
-    this.angleChangeMaxButton.emit(this._angle);
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
