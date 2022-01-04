@@ -12,7 +12,7 @@ import { filter, map, tap } from 'rxjs/operators';
 import { Point } from '../../app/interfaces/point';
 import { Circle } from '../../app/interfaces/circle';
 
-// Mouse pointer button variable assigned to 0 initially.
+// Mouse pointer button variable for mouse events assigned to 0 initially.
 const MOUSE_PRIMARY = 0;
 
 @Directive({
@@ -38,7 +38,6 @@ export class minCircularSliderButtonDirective implements OnInit {
    * Declares the initial property minButtonDiameter of type number, equal to 0.
    */
   private windowStart?: Point;
-  // private layerLatestDelta?: any = 0;
   private circleRadius: number = 0;
   private minButtonDiameter: number = 0;
 
@@ -139,7 +138,7 @@ export class minCircularSliderButtonDirective implements OnInit {
           if (event.target && (event.target as HTMLElement).draggable) {
             event.preventDefault();
           }
-          // avoid triggering other draggable parents.
+          // Avoid triggering other draggable parents.
           event.stopPropagation();
         }),
         map((event) => parseMouseEvent(event))
