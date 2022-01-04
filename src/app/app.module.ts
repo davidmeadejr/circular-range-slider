@@ -6,7 +6,6 @@ import { InnerCircleComponent } from './components/inner-circle/inner-circle.com
 import { OuterCircleComponent } from './components/outer-circle/outer-circle.component';
 import { MinButtonComponent } from './components/min-button/min-button.component';
 import { MaxButtonComponent } from './components/max-button/max-button.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CircularSliderComponent } from './components/circular-slider/circular-slider.component';
 import { CircularSliderModalComponent } from './components/circular-slider-modal/circular-slider-modal.component';
