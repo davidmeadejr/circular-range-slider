@@ -171,7 +171,7 @@ export class minCircularSliderButtonDirective implements OnInit {
    * Which subscribes to both observables.
    * Where if the user is no longer moving the button and mouse button is up.
    * The min button stops.
-   * Then unregisterMove() is called which subscribes from the events.
+   * Then unregisterMove() is called which unsubscribes from the events.
    */
   private registerMove() {
     this.unregisterMove();
@@ -220,7 +220,7 @@ export class minCircularSliderButtonDirective implements OnInit {
 
   /*
    * When dragMove is called.
-   * Assign the value of the calMinButtonAngle relative to the circle circumference to angle.
+   * Assign the value of the calcMinButtonAngle relative to the circle circumference  angle.
    * Then round that value to the nearest integer.
    */
   private dragMove(windowPoint: Point) {
