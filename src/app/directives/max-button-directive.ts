@@ -256,7 +256,7 @@ export class maxCircularSliderButtonDirective implements OnInit {
       );
       angle = -aTan / (Math.PI / 180) + 180;
 
-      this.hideMaxButton();
+      this.hideShowMaxButton();
     }
 
     return angle;
@@ -267,7 +267,7 @@ export class maxCircularSliderButtonDirective implements OnInit {
    * Then show max button if angle is >= 220 and <=360 or >=0 and <= 140.
    * Or hide max button if angle is > 140  and < 220.
    */
-  private hideMaxButton() {
+  private hideShowMaxButton() {
     if (
       (this.angle >= 220 && this.angle <= 360) ||
       (this.angle >= 0 && this.angle <= 140)

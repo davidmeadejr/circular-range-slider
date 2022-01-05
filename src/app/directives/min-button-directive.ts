@@ -220,7 +220,7 @@ export class minCircularSliderButtonDirective implements OnInit {
 
   /*
    * When dragMove is called.
-   * Assign the value of the calcMinButtonAngle relative to the circle circumference  angle.
+   * Assign the value of the calcMinButtonAngle relative to the circle circumference angle.
    * Then round that value to the nearest integer.
    */
   private dragMove(windowPoint: Point) {
@@ -260,7 +260,7 @@ export class minCircularSliderButtonDirective implements OnInit {
 
       angle = -aTan / (Math.PI / 180) + 180;
 
-      this.hideMinButton();
+      this.hideShowMinButton();
     }
 
     return angle;
@@ -271,7 +271,7 @@ export class minCircularSliderButtonDirective implements OnInit {
    * Then show min button if angle is >= 220 and <=360 or >=0 and <= 140.
    * Or hide min button if angle is > 140  and < 220.
    */
-  private hideMinButton() {
+  private hideShowMinButton() {
     if (
       (this.angle >= 220 && this.angle <= 360) ||
       (this.angle >= 0 && this.angle <= 140)
