@@ -237,7 +237,8 @@ export class minCircularSliderButtonDirective implements OnInit {
    * Then calculate the offset.
    * Mouse position.
    * Then the angle in radians between the point = (x,y) coordinates and the positive X axis.
-   * And assign the angle to an negative atan divided by (pi / 180 ) plus 180.
+   * Assign the angle to an negative atan divided by (pi / 180 ) plus 180.
+   * Then call hideMinButton which shows or hides the min button depending on its angle.
    * Then return angle.
    */
   private calcMinButtonAngle(windowPoint: Point) {
@@ -252,10 +253,32 @@ export class minCircularSliderButtonDirective implements OnInit {
         mousePos.x - this.circleRadius,
         mousePos.y - this.circleRadius
       );
+
       angle = -aTan / (Math.PI / 180) + 180;
+
+      this.hideMinButton();
     }
 
     return angle;
+  }
+
+  /*
+   * When hideMinButton is called.
+   * Then show min button if angle is >= 220 and <=360 or >=0 and <= 140.
+   * Or hide min button if angle is > 140  and < 220.
+   */
+  private hideMinButton() {
+    if (
+      (this.angle >= 220 && this.angle <= 360) ||
+      (this.angle >= 0 && this.angle <= 140)
+    ) {
+      (<HTMLInputElement>document.getElementById('minCircleButton')).hidden =
+        false;
+      console.log(this.angle);
+    } else if (this.angle > 140 && this.angle < 220) {
+      (<HTMLInputElement>document.getElementById('minCircleButton')).hidden =
+        true;
+    }
   }
 
   /*
@@ -302,8 +325,8 @@ function parseMouseEvent(event: MouseEvent): Point {
 
 /*
  * TODO:
- * Minimum button logic where it can only be dragged clockwise from angles 220 to 140 and anti-clockwise from 140 - 220.
- * Logic that removes the ability for the min button to overlap the max button.
+ * Maximum button logic where it can only be dragged anti-clockwise from angles 140 to 220 and clockwise from 220 - 140.
+ * Logic that removes the ability for the min button to overlap the max button and vice versa. (Done)
  * Logic that sets the angle 220 as the lowest possible value of 0  and the angle 140 as the highest possible value of 100.
  * Mouse position x and y coordinates maintain the correct position relative to page zoom in or zoom out states.
  */

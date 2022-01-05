@@ -12,6 +12,8 @@ import { CircularSliderModalComponent } from './components/circular-slider-modal
 import { FooterComponent } from './components/footer/footer.component';
 import { minButtonSliderModule } from './components/min-button-slider.module';
 import { MaxButtonSliderModule } from './components/max-button-slider.module';
+import { MinLineComponent } from './components/min-line/min-line.component';
+import { MaxLineComponent } from './components/max-line/max-line.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { MaxButtonSliderModule } from './components/max-button-slider.module';
     CircularSliderComponent,
     CircularSliderModalComponent,
     FooterComponent,
+    MinLineComponent,
+    MaxLineComponent,
   ],
   imports: [
     BrowserModule,
