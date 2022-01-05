@@ -244,7 +244,10 @@ export class maxCircularSliderButtonDirective implements OnInit {
     if (this.diameter) {
       const offset = this.circleRadius - this.maxButtonDiameter / 2;
       const mousePos: Point = {
-        x: windowPoint.x - offset - 1180 + this.maxButtonDiameter,
+        // (x,y) coordinates for large screen
+        // x: windowPoint.x - offset - 1180 + this.maxButtonDiameter,
+        // y: windowPoint.y - offset - 360 + this.maxButtonDiameter,
+        x: windowPoint.x - offset - 500 + this.maxButtonDiameter,
         y: windowPoint.y - offset - 360 + this.maxButtonDiameter,
       };
       const aTan = Math.atan2(
